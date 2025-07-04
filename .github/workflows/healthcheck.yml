@@ -1,0 +1,16 @@
+name: Hit API every minute
+
+on:
+  schedule:
+    - cron: "*/1 * * * *" # every 1 minute
+  workflow_dispatch:       # optional: lets you trigger manually
+
+jobs:
+  hit-api:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Call the API
+      run: |
+        echo "Hitting API at $(date)"
+        curl -X GET https://sudo-proxy-tu01.onrender.com/
