@@ -2,8 +2,8 @@ name: Hit API every minute
 
 on:
   schedule:
-    - cron: "*/1 * * * *" # every 1 minute
-  workflow_dispatch:       # optional: lets you trigger manually
+    - cron: "*/5 * * * *" # every 1 minute
+  #workflow_dispatch:       # optional: lets you trigger manually
 
 jobs:
   hit-api:
